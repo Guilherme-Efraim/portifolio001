@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primaria: #4f46e5;
+    --secundaria: #7c3aed;
+    --escuro: #0f172a;
+    --maisEscuro: #0a0f1c;
+    --claro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.1);
+    --fonteRoboto: "Roboto", sans-serif;
+}
+
+* {
+    font-family: var(--fonteRoboto);
+    padding: 0px;
+    margin: 0px;
+}
+
+/*------- Header--------*/
+
+header {
+    background-color: var(--escuro);
+}
+
+header > nav {
+    display: flex;
+    justify-content: center;
+}
+
+header > nav > a {
+    margin: 1rem;
+    color: var(--claro);
+    text-decoration: none;
+}
+
+header > nav > a:hover {
+
+}
+
+/*--------Inicio--------*/
+
+section#Inicio {
+    padding: 2.5rem;
+    background-color: var(--maisEscuro);
+}
+
+.titulo {
+    text-align: center;
+    color: var(--primaria);
+}
+
+div.perfil > img {
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin: auto;
+    margin-bottom: 2.5rem;
+    border-radius: 50%;
+}
+
+div.perfil > p {
+    color: var(--claro);
+    margin-top: 1rem;
+    text-align: center;
+}
