@@ -39,7 +39,7 @@ header > nav > a:hover {
 
 /*--------Inicio--------*/
 
-section#Inicio {
+section {
     padding: 2.5rem;
     background-color: var(--maisEscuro);
 }
@@ -62,4 +62,90 @@ div.perfil > p {
     color: var(--claro);
     margin-top: 1rem;
     text-align: center;
+}
+
+/*--------SObre Mim--------*/
+
+section.sobre-mim div {
+    display: block;
+    margin: auto;
+    max-width: 650px;
+    padding: 1.2rem;
+    border-radius: 10px;
+    background-color: var(--vidro);
+}
+
+.titulo-sec {
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--claro);
+}
+
+section.sobre-mim > div > p {
+    text-align: justify;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: var(--claro);
+}
+
+/*--------Projetos--------*/
+
+div.grid-box {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+}
+
+.grid-item {
+    min-width: 350px;
+    max-width: 350px;
+    max-height: 400px;
+    display: grid;
+    grid-template-rows: 250px 250px;
+    border-radius: 10px;
+    background-color: var(--vidro);
+}
+
+div.grid-box > div.grid-item:hover {
+    cursor: pointer;
+}
+
+div.grid-item > .grid-imagem01 {
+    border-radius: 10px 10px 0px 0px;
+    background: url(../src/img/all-anime-one-piece-characters-dltnq47nfztq40m7.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+div.grid-item > .grid-imagem02 {
+    border-radius: 10px 10px 0px 0px;
+    background: url(../src/img/0f74dba7f1232a745510cb99194b9b18.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+div.grid-item > .grid-imagem03 {
+    border-radius: 10px 10px 0px 0px;
+    background: url(../src/img/poster-do-anime-shangri-la-1699546911949_v2_900x506.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+div.grid-item > .grid-content {
+    color: var(--claro);
+    text-align: center;
+    margin: 1rem;
+}
+
+div.grid-content > h2 {
+    margin-bottom: 0.7rem;
+}
+
+div.grid-content > p {
+    font-weight: 300;
 }
