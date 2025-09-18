@@ -7,15 +7,14 @@
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#Inicio" class="nav-item">Início</a>
-            <a href="#Sobre" class="nav-item">Sobre</a>
-            <a href="#Projetos" class="nav-item">Projetos</a>
-            <a href="Contato" class="nav-item">Contato</a>
-        </nav>
-    </header>
-    
+    <nav class="nav-bar">
+        <ul class="flex-box">
+            <li><a href="#Inicio" class="nav-item">Início</a></li>
+            <li><a href="#Sobre" class="nav-item">Sobre</a></li>
+            <li><a href="#Projetos" class="nav-item">Projetos</a></li>
+            <li><a href="#Contato" class="nav-item">Contato</a></li>
+        </ul>
+    </nav>
     <section id="Inicio">
         <div class="perfil">
             <img src="../src/img/poster-do-anime-shangri-la.png" alt="perfil">
@@ -81,6 +80,17 @@
                     </p>
                 </div>
             </div>
+        </div>
+    </section>
+    <section id="Contato" class="contato">
+        <h1 class="titulo-sec">
+            Entre em Contato
+        </h1>
+        <div class="form-container">
+            <form action="">
+                <input type="text" name="nome" id="inome">
+                <input type="text" name="texto" id="itexto">
+            </form>
         </div>
     </section>
 </body>
