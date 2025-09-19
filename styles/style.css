@@ -80,6 +80,9 @@ div.perfil > img {
     margin-top: 4rem;
     margin-bottom: 2.5rem;
     border-radius: 50%;
+    box-shadow: 0 5px 20px rgba(79, 70, 229, 0.2);
+    border: 2px solid var(--vidro);
+    animation: flutuar 5s ease-in-out infinite;
 }
 
 div.perfil > p {
@@ -96,7 +99,9 @@ section.sobre-mim div {
     max-width: 650px;
     padding: 1.2rem;
     border-radius: 10px;
-    background-color: var(--vidro);
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .titulo-sec {
@@ -125,14 +130,18 @@ div.grid-box {
 .grid-item {
     min-width: 350px;
     max-width: 350px;
+    min-height: 400px;
     max-height: 400px;
     display: grid;
     grid-template-rows: 250px 250px;
     border-radius: 10px;
     background-color: var(--vidro);
+    transition: all 0.5s ease;
 }
 
-div.grid-box > div.grid-item:hover {
+.grid-item:hover {
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    transform: translateY(-10px) scale(1.01);
     cursor: pointer;
 }
 
@@ -172,4 +181,82 @@ div.grid-content > h2 {
 
 div.grid-content > p {
     font-weight: 300;
+}
+
+/*--------Contato--------*/
+
+.formulario-contato {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin: auto;
+    max-width: 600px;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.div-form {
+    width: 90%;
+}
+
+.campo-form {
+    padding: 0.2rem;
+    width: 100%;
+    height: 20px;
+    border-radius: 8px;
+    color: var(--claro);
+    border: 1px solid var(--vidro);
+    background-color: rgba(255, 255, 255, 0.05);
+    outline: none;
+}
+
+.campo-form:focus {
+    border-color: var(--secundaria);
+    box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
+}
+
+.botao-form {
+    color: var(--claro);
+    background: linear-gradient(45deg, var(--primaria), var(--secundaria)); 
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 90%;
+    transition: all 0.5 ease;
+}
+
+.botao-form:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+}
+
+/*--------------------*/
+
+.particulas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%), radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 10%), var(--maisEscuro);
+}
+
+/*--------------------*/
+
+
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
 }
